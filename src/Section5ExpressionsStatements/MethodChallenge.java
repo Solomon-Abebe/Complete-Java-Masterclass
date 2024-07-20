@@ -2,9 +2,14 @@ package Section5ExpressionsStatements;
 
 public class MethodChallenge {
     public static void main(String[] args) {
-        int rank = calculateHighScorePosition(50);
-
-        displayHighScorePosition("SOl", rank);
+        int highScorePosition = calculateHighScorePosition(1500);
+        displayHighScorePosition("SOl", highScorePosition);
+        highScorePosition = calculateHighScorePosition(500);
+        displayHighScorePosition("Bob", highScorePosition);
+        highScorePosition = calculateHighScorePosition(499);
+        displayHighScorePosition("Tim", highScorePosition);
+        highScorePosition = calculateHighScorePosition(50);
+        displayHighScorePosition("Candy", highScorePosition);
 
     }
     public static void displayHighScorePosition(String name, int rank){
@@ -15,10 +20,10 @@ public class MethodChallenge {
         int result = 4;
         if (score>=1000){
             result = 1;
-        } else if (score<1000 && score>=500) {
+        } else if (score>=500) {
             result = 2;
             
-        } else if (score >= 100 && score <500) {
+        } else if (score >= 100) {
             result = 3;
             
         }
